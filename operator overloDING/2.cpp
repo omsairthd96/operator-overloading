@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+class Count {
+   private:
+    int value;
+
+   public:
+
+    Count() : value(5) {}
+
+    // Overload ++ when used as postfix
+    void operator ++ (int) {
+        value++;
+    }
+
+    int getValue() {
+        return value;
+    }
+};
+
+int main() {
+    Count count1;
+
+
+    count1++;
+
+    cout << "Count: " << count1.getValue() << endl;
+    return 0;
+}
